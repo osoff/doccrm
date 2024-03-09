@@ -19,19 +19,19 @@ function Home() {
       <section className="py-28 w-full px-6">
         <Chat />
       </section>
-      <section className="py-24 bg-[#f5f6f8] w-full px-6">
+      <section className="py-24 bg-[#f5f6f8] w-screen px-6">
         <ForWhom />
       </section>
       <section className="py-24  w-full px-6">
         <Attention />
       </section>
-      <section className="py-24  w-full px-6">
+      <section className="pt-24  w-full px-6">
         <Donot />
       </section>
-      <section className="pb-24 w-full px-6" id="form">
+      <section className="py-24 w-full px-6" id="form">
         <Inject />
       </section>
-      <section className="py-24 bg-[#f5f6f8] w-full">
+      <section className="py-24 bg-[#f5f6f8] w-screen">
         <Tarifs />
       </section>
     </>

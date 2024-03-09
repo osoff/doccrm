@@ -1,16 +1,15 @@
 "use client";
 
 import { sendMessage } from "@hooks/sendmessage";
+import { useLocalStorage } from "@hooks/useLocalStorage";
 import Image from "next/image";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Inject() {
-  const [prime, setPrime] = useState(false);
-  const { phone, setPhone } = useState("");
+  const [isSended, setIsSended] = useLocalStorage(false, "isSended");
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       name: "",
@@ -29,6 +28,17 @@ function Inject() {
           : ""
       }`
     );
+    setIsSended(true);
+    toast.success("Запрос успешно принят!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   }
   return (
     <div className=" flex flex-col text-center  lg:flex-row gap-10 justify-center items-center">
@@ -37,7 +47,7 @@ function Inject() {
           Пора внедрять <span className=" text-primary-blue">DocCRM</span>
         </h2>
         <p className="othertext">
-          Расскажем подробнее о пользе для консультирующих врачей
+          Расскажем подробности и предоставим бесплатный доступ
         </p>
         <Image src={"/wolf.svg"} alt="wolf" width={493} height={221} />
       </div>
@@ -69,7 +79,8 @@ function Inject() {
             {...register("email", {
               required: "Укажите почту",
               pattern: {
-                value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
+                value:
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
                 message: "Введите корректный email",
               },
             })}
@@ -81,7 +92,11 @@ function Inject() {
           )}
         </div>
         <div className="  flex justify-center">
-          <button type="submit" className="animbtn  bg-[#02ce79]">
+          <button
+            type="submit"
+            disabled={isSended}
+            className="animbtn disabled:bg-gray-500 disabled:text-white  bg-[#02ce79]"
+          >
             Оставить заявку
           </button>
         </div>
@@ -90,6 +105,7 @@ function Inject() {
           соглашение и соглашаетесь на обработку персональных данных
         </p>
       </form>
+      <ToastContainer />
     </div>
   );
 }

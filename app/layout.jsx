@@ -5,6 +5,11 @@ import "@styles/globals.css";
 export const metadata = {
   title: "DocCRM",
   description: "CRM for doctors",
+  icons: {
+    icon: "/icodoc.png",
+    shortcut: "/icodoc.png",
+    apple: "/icodoc.png",
+  },
 };
 
 export default function RootLayout({ children }) {
