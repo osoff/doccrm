@@ -9,7 +9,7 @@ import { Autoplay } from "swiper/modules";
 function Chat() {
   return (
     <div className=" flex flex-col items-center gap-10">
-      <h2 className="headtext text-center">Общий чат для всех пациентов</h2>
+      <h2 className="headtext text-center">Один чат для всех пациентов</h2>
       <p className="secondtext text-center max-w-3xl">
         Люди хотят общаться с врачом, там где им удобно. Дайте им такую
         возможность. DocCRM объединит в одном интерфейсе все каналы коммуникации

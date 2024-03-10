@@ -7,8 +7,8 @@ function Hero() {
     <div className="flex gap-2 flex-col-reverse items-center  lg:flex-row">
       <div className="flex flex-col gap-12 lg:max-w-[45%] max-w-[540px] md:max-w-[720px]">
         <h1 className="headtext">
-          CRM-система,
-          <span className=" text-primary-blue "> для врачей </span>
+          CRM-система
+          <span className=" text-primary-blue "> для врачей, </span>
           которые консультируют
           <span> онлайн</span>
         </h1>
