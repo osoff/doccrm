@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 
-function TarifCard({ click, main = false, days, price, discount = false }) {
+function TarifCard({
+  click,
+  main = false,
+  days,
+  price,
+  discount = false,
+  forUser,
+}) {
   return (
     <Link
       href={"#form"}
@@ -23,7 +30,8 @@ function TarifCard({ click, main = false, days, price, discount = false }) {
       </div>
       <p className=" text-center text-2xl mt-10">{price} RUB</p>
       <p className="text-center">
-        Все возможности системы без ограничений (до 5 пользователей)
+        Все возможности системы без ограничений (до 5 пользователей +{" "}
+        {forUser && `${+forUser + " Руб за пользователя"}`})
       </p>
       <button
         className={`mt-20 px-3 py-2 ${

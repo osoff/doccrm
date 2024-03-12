@@ -5,11 +5,11 @@ import TarifCard from "./TarifCard";
 function Tarifs() {
   return (
     <div className=" flex flex-col items-center gap-10">
-      <h2 className=" headtext text-center">Тарифы</h2>
+      <h2 className=" headtext text-center">Подписка</h2>
       <div className=" flex flex-col lg:flex-row px-2 gap-10 justify-center items-center">
         <TarifCard
           price={0}
-          days={"30 дней"}
+          days={"14 дней"}
           main={false}
           click={() => {
             localStorage.setItem("tarif", "30 days");
@@ -19,6 +19,7 @@ function Tarifs() {
         <TarifCard
           price={1200}
           days={"3 месяца"}
+          forUser={120}
           main={true}
           click={() => {
             localStorage.setItem("tarif", "3 months");
@@ -29,6 +30,7 @@ function Tarifs() {
           price={1000}
           discount
           days={"12 месяцев"}
+          forUser={100}
           main={false}
           click={() => {
             localStorage.setItem("tarif", "12 months");

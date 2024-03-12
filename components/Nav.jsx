@@ -1,22 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import NavButton from "./NavButton";
-import { useEffect, useState } from "react";
-import { popEls } from "@constants";
-import PopupCard from "./PopupCard";
-import { useModalClick } from "@hooks/useClickOutside";
 
 function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const ref = useModalClick(() => setIsMenuOpen(false));
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "scroll";
-    }
-  }, [isMenuOpen]);
   return (
     <>
       <nav className=" flex sticky top-0 z-40 bg-white px-3 gap-2 justify-between items-center py-3 font-medium w-full">
@@ -65,9 +49,6 @@ function Nav() {
           <p className="text-2xl font-semibold">DocCRM</p>
         </Link>
         <div className="flex  gap-10 items-center text-xs sm:text-md">
-          <NavButton open={isMenuOpen} setOpen={setIsMenuOpen}>
-            Что внутри
-          </NavButton>
           <Link
             href="#form"
             className="px-4 py-2 bg-primary-blue hover:bg-[#0e8df2] text text-xs rounded-lg text-white transition-all duration-200"
@@ -76,22 +57,6 @@ function Nav() {
           </Link>
         </div>
       </nav>
-      <div
-        className={`${
-          isMenuOpen ? "opacity-100 z-20" : "opacity-0  z-0"
-        } absolute left-0 top-[74px] popup hidden sm:block w-full h-[99%] `}
-      >
-        <div className=" sticky top-20 flex justify-center pt-5 px-5">
-          <div
-            ref={ref}
-            className="bg-dark-blue   z-30 flex flex-col lg:flex-row  max-w-[1440px] p-8  rounded-3xl"
-          >
-            {popEls.map((pop) => (
-              <PopupCard popInfo={pop} key={pop.title} />
-            ))}
-          </div>
-        </div>
-      </div>
     </>
   );
 }

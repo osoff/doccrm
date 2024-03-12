@@ -20,13 +20,11 @@ export const popEls = [
 
 export const slider = [
   { title: "Instagram", img: "/instagram.svg" },
-  { title: "Сайт", img: "/tilda.svg" },
   { title: "Telegram", img: "/telegram.svg" },
   { title: "WhatsApp", img: "/whatsapp.svg" },
   { title: "Facebook", img: "/facebook.svg" },
   { title: "Viber", img: "/viber.svg" },
   { title: "Электронная почта", img: "/email.svg" },
-  { title: "Телфин", img: "/telphin.svg" },
   { title: "Вконтакте", img: "/vk.svg" },
 ];
 
@@ -46,13 +44,13 @@ export const donot = [
   {
     title: "Каждые 5 минут проверять мессенджеры",
     description:
-      "DocCRM собирает сообщения из различных мессенджеров в одном месте",
+      "DocCRM собирает сообщения из различных мессенджеров в одном месте.",
     img: "/message.svg",
   },
   {
     title: "Печатать текст вручную",
     description:
-      "Говорите голосом, DocCRM распознает вашу речь и подставит текст в сообщения и документы",
+      "Говорите голосом, DocCRM распознает вашу речь и подставит текст в сообщения и документы.",
     img: "/voiceinp.png",
   },
 ];

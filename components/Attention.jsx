@@ -58,7 +58,7 @@ function Attention() {
               <Check fill="#2196f3" />
               <p className="flex-1">
                 CRM заботится о рутине. Пишет сообщения в мессенджеры и по смс,
-                ведёт задачи,
+                ведёт задачи.
               </p>
             </li>
             <li className="flex gap-4 ">

@@ -28,6 +28,7 @@ function Chat() {
         <Swiper
           slidesPerView={1}
           spaceBetween={50}
+          loop={true}
           breakpoints={{
             480: {
               slidesPerView: 2,
