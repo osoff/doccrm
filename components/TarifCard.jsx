@@ -30,8 +30,8 @@ function TarifCard({
       </div>
       <p className=" text-center text-2xl mt-10">{price} RUB</p>
       <p className="text-center">
-        Все возможности системы без ограничений (до 5 пользователей +{" "}
-        {forUser && `${+forUser + " Руб за пользователя"}`})
+        Все возможности системы без ограничений (до 5 пользователей{" "}
+        {forUser && `${"+ " + forUser + " Руб за пользователя"}`})
       </p>
       <button
         className={`mt-20 px-3 py-2 ${
