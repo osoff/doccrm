@@ -6,7 +6,7 @@ function Tarifs() {
   return (
     <div className=" flex flex-col items-center gap-10">
       <h2 className=" headtext text-center">Подписка</h2>
-      <div className=" flex flex-col lg:flex-row px-2 gap-10 justify-center items-center">
+      <div className=" flex flex-wrap lg:flex-row px-2 gap-10 justify-center items-center">
         <TarifCard
           price={0}
           days={"14 дней"}
