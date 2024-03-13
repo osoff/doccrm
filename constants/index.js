@@ -55,5 +55,13 @@ export const donot = [
   },
 ];
 
+export const options = [
+  { value: "basepac", label: "База пациентов" },
+  { value: "chat", label: "Чат с пациентами" },
+  { value: "alerts", label: "Cистема уведомлений" },
+  { value: "documents", label: "Электронный документооборот" },
+  { value: "voice", label: "Голосовой набор текста" },
+];
+
 export const chatId = "-4141737528";
 export const tokenBot = "7176187022:AAGNGNx_T0NHUW4y80fSdV8Vw1RKravTEVQ";

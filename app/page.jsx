@@ -10,28 +10,28 @@ import Tarifs from "@components/Tarifs";
 function Home() {
   return (
     <>
-      <section className=" w-full pl-5 pt-5 pb-24 sm:pl-10  lg:py-10 xl:py-32 px-3 sm:px-6">
+      <section className=" w-full pl-5 pt-5 pb-24 sm:pl-10  lg:py-10 xl:py-32 px-3 sm:px-6 max-w-[1508px]">
         <Hero />
       </section>
-      <section className="bg-[#f5f6f8] py-24 w-screen px-6">
+      <section className="bg-[#f5f6f8] py-24 w-full px-6">
         <Descript />
       </section>
-      <section className="py-28 w-full px-6">
+      <section className="py-28 w-full px-6 max-w-[1508px]">
         <Chat />
       </section>
-      <section className="py-24 bg-[#f5f6f8] w-screen px-6">
+      <section className="py-24 bg-[#f5f6f8] w-full px-6">
         <ForWhom />
       </section>
-      <section className="py-24  w-full px-6">
+      <section className="py-24  w-full px-6  max-w-[1508px]">
         <Attention />
       </section>
-      <section className="pt-24  w-full px-6">
+      <section className="pt-24  w-full px-6  max-w-[1508px]">
         <Donot />
       </section>
-      <section className="py-24 w-full px-6" id="form">
+      <section className="py-24 w-full px-6  max-w-[1508px]" id="form">
         <Inject />
       </section>
-      <section className="py-24 bg-[#f5f6f8] w-screen">
+      <section className="py-24 bg-[#f5f6f8] w-full">
         <Tarifs />
       </section>
     </>
