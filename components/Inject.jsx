@@ -44,6 +44,7 @@ function Inject() {
         theme: "light",
       });
     } else {
+      _tmr.push({ type: "reachGoal", id: 3493947, goal: "REQUEST_TRIAL" });
       await sendMessage(
         `Отправлена форма %0AИмя:${name} %0AТелефон:${
           phone ? phone : "не указан"

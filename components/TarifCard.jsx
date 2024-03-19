@@ -41,6 +41,13 @@ function TarifCard({
         className={`px-3 py-2 ${
           main ? "bg-white text-primary-blue" : "bg-primary-blue text-white"
         } rounded-full`}
+        onClick={() => {
+          _tmr.push({
+            type: "reachGoal",
+            id: 3493947,
+            goal: "JUMP_TO_FORM",
+          });
+        }}
       >
         Попробовать
       </button>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
@@ -12,7 +14,17 @@ function ForWhom() {
         поможет конвертировать её в платные консультации.
       </p>
       <Image src={"/audience.svg"} width={1069} height={324} alt="audience" />
-      <Link href={"#form"} className="animbtn">
+      <Link
+        href={"#form"}
+        className="animbtn"
+        onClick={() => {
+          _tmr.push({
+            type: "reachGoal",
+            id: 3493947,
+            goal: "JUMP_TO_FORM",
+          });
+        }}
+      >
         Зарегистрироваться
         <FaArrowRight className=" ml-4" />
       </Link>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,7 +18,18 @@ function DoCard({ title, description, img }) {
           <p className=" secondtext">{description}</p>
           <Link href={"#form"}>
             <div className=" flex justify-center md:block">
-              <button className="animbtn">Попробовать</button>
+              <button
+                className="animbtn"
+                onClick={() => {
+                  _tmr.push({
+                    type: "reachGoal",
+                    id: 3493947,
+                    goal: "JUMP_TO_FORM",
+                  });
+                }}
+              >
+                Попробовать
+              </button>
             </div>
           </Link>
         </div>

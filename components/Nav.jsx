@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +13,13 @@ function Nav() {
         </Link>
         <div className="flex  gap-10 items-center text-xs sm:text-md">
           <Link
+            onClick={() => {
+              _tmr.push({
+                type: "reachGoal",
+                id: 3493947,
+                goal: "JUMP_TO_FORM",
+              });
+            }}
             href="#form"
             className="px-4 py-2 bg-primary-blue hover:bg-[#0e8df2] text text-xs rounded-lg text-white transition-all duration-200"
           >

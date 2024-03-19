@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Check from "./Check";
 import { FaArrowRight } from "react-icons/fa6";
@@ -71,7 +73,17 @@ function Attention() {
           </ul>
         </div>
       </div>
-      <Link href={"#form"} className="animbtn">
+      <Link
+        href={"#form"}
+        className="animbtn"
+        onClick={() => {
+          _tmr.push({
+            type: "reachGoal",
+            id: 3493947,
+            goal: "JUMP_TO_FORM",
+          });
+        }}
+      >
         Попробовать DocCRM
         <FaArrowRight className=" ml-4" />
       </Link>
