@@ -73,20 +73,22 @@ function Attention() {
           </ul>
         </div>
       </div>
-      <Link
-        href={"#form"}
-        className="animbtn"
-        onClick={() => {
-          _tmr.push({
-            type: "reachGoal",
-            id: 3493947,
-            goal: "JUMP_TO_FORM",
-          });
-        }}
-      >
-        Попробовать DocCRM
-        <FaArrowRight className=" ml-4" />
-      </Link>
+      <button>
+        <Link
+          href={"#form"}
+          className="animbtn"
+          onClick={() => {
+            _tmr.push({
+              type: "reachGoal",
+              id: 3493947,
+              goal: "JUMP_TO_FORM",
+            });
+          }}
+        >
+          Попробовать DocCRM
+          <FaArrowRight className=" ml-4" />
+        </Link>
+      </button>
     </div>
   );
 }
